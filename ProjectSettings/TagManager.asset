@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - PlayerJab
+  - PlayerKick
+  - EnemyJab
+  - EnemyKick
   layers:
   - Default
   - TransparentFX

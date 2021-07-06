@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class PlayerController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     enum Fight
     {
@@ -12,16 +13,12 @@ public class PlayerController : MonoBehaviour
         Kick
     }
     
-    //Inputs:
-    [SerializeField] private KeyCode key0 = KeyCode.J;
-    [SerializeField] private KeyCode key1 = KeyCode.K;
-    [SerializeField] private KeyCode keyJump = KeyCode.Space;
-
     [SerializeField] private float moveSpd = 2;
     [SerializeField] private float jumpForce = 5;
 
     private bool _isInAction = false;
     private bool _isGrounded = false;
+    private bool _isMove = true;
     private int _Stunned = 0;
     
     private Rigidbody2D _rb;
@@ -33,8 +30,11 @@ public class PlayerController : MonoBehaviour
 
     private GameObject _frame = null;
 
+    [SerializeField] private GameObject player;
+
     [SerializeField] private Fight action = Fight.Idle;
     [SerializeField] private int frameCount = 0;
+    [SerializeField] private int randomFrames = 100;
     
     
     
@@ -55,19 +55,34 @@ public class PlayerController : MonoBehaviour
         if (_Stunned <= 0)
         {
             _anim.speed = 1;
-        
-            var axisX = Input.GetAxisRaw("Horizontal");
-            var input0 = Input.GetKey(key0);
-            var input1 = Input.GetKey(key1);
-            var inputJump = Input.GetKey(keyJump);
-            
-            PlayerMove(axisX, inputJump);
-            
-            PlayerFight(input0, input1);
+            var axisX = Mathf.Sign(player.transform.position.x - transform.position.x);
+
+            var input0 = false;
+            var input1 = false;
+            if (Random.Range(0, 2) == 1)
+            {
+                input0 = true;
+            }
+            else
+            {
+                input1 = true;
+            }
+
+            PlayerMove(axisX, false);
+
+            if (randomFrames <= 0)
+            {
+                PlayerFight(input0, input1);
+                randomFrames = Random.Range(50, 80);
+            }
+            else
+            {
+                randomFrames--;
+            }
 
             if (_isInAction)
             {
-                if(_frame) _frame.SetActive(false);
+                if (_frame) _frame.SetActive(false);
                 //TODO: Find and store frames in start so that this is more efficient.
                 var temp = transform.Find(GetStringFromFight(action)).Find("Frame" + frameCount);
                 _frame = temp ? temp.gameObject : null;
@@ -93,13 +108,14 @@ public class PlayerController : MonoBehaviour
             _spriteRenderer.enabled = true;
             if (_frame) _frame.SetActive(false);
             _Stunned--;
+            randomFrames--;
             _anim.speed = 0;
         }
     }
 
     private void PlayerMove(float axisX, bool jump)
     {
-        if (axisX != 0 && !_isInAction)
+        if (axisX != 0 && !_isInAction && _isMove)
         {
             _rb.velocity = new Vector2(axisX * moveSpd, _rb.velocity.y);
             _anim.SetBool(_isWalkingID, true);
@@ -144,6 +160,11 @@ public class PlayerController : MonoBehaviour
             _isGrounded = true;
             _anim.SetBool(_jumpID, false);
         }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _isMove = false;
+        }
     }
     
     private void OnCollisionExit2D(Collision2D other)
@@ -153,22 +174,26 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
             _anim.SetBool(_jumpID, true);
         }
+        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _isMove = true;
+        }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_Stunned <= 0)
         {
-            if (other.CompareTag("EnemyJab"))
+            if (other.CompareTag("PlayerJab"))
             {
-                Debug.Log("Hit.");
                 _Stunned = 15;
                 _rb.AddForce(-Mathf.Sign(other.transform.position.x - transform.position.x) * Vector2.right * 5,
                     ForceMode2D.Impulse);
                 //Get Stunned
             }
 
-            if (other.CompareTag("EnemyKick"))
+            if (other.CompareTag("PlayerKick"))
             {
                 _Stunned = 20;
                 _rb.AddForce(-Mathf.Sign(other.transform.position.x - transform.position.x) * Vector2.right * 7.5f,
@@ -177,6 +202,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 
     private string GetStringFromFight(Fight action)
     {
