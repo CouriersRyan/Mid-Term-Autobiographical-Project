@@ -128,6 +128,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8141499318648636996, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
   m_PrefabInstance: {fileID: 8141499318508620906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &166300207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166300206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fa913622a69a34d89b60b710711ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpd: 3
+  jumpForce: 6
+  action: 0
+  frameCount: 0
 --- !u!1 &166997856
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,9 +155,9 @@ GameObject:
   - component: {fileID: 166997857}
   - component: {fileID: 166997859}
   - component: {fileID: 166997858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame7
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,9 +265,9 @@ GameObject:
   - component: {fileID: 180194409}
   - component: {fileID: 180194408}
   - component: {fileID: 180194407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame10
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,9 +400,9 @@ GameObject:
   - component: {fileID: 238234066}
   - component: {fileID: 238234068}
   - component: {fileID: 238234067}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame3
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,9 +510,9 @@ GameObject:
   - component: {fileID: 301561644}
   - component: {fileID: 301561643}
   - component: {fileID: 301561642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame15
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,9 +645,9 @@ GameObject:
   - component: {fileID: 302144004}
   - component: {fileID: 302144006}
   - component: {fileID: 302144005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame1
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,9 +754,9 @@ GameObject:
   - component: {fileID: 334368719}
   - component: {fileID: 334368721}
   - component: {fileID: 334368720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame5
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -847,9 +863,9 @@ GameObject:
   - component: {fileID: 362127277}
   - component: {fileID: 362127279}
   - component: {fileID: 362127278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame0
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -956,9 +972,9 @@ GameObject:
   - component: {fileID: 462371803}
   - component: {fileID: 462371805}
   - component: {fileID: 462371804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame2
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1065,9 +1081,9 @@ GameObject:
   - component: {fileID: 467570053}
   - component: {fileID: 467570055}
   - component: {fileID: 467570054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame4
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,9 +1190,9 @@ GameObject:
   - component: {fileID: 649790075}
   - component: {fileID: 649790077}
   - component: {fileID: 649790076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame6
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1284,9 +1300,9 @@ GameObject:
   - component: {fileID: 651978752}
   - component: {fileID: 651978751}
   - component: {fileID: 651978750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame12
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,9 +1435,9 @@ GameObject:
   - component: {fileID: 739939572}
   - component: {fileID: 739939574}
   - component: {fileID: 739939573}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame6
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1529,9 +1545,9 @@ GameObject:
   - component: {fileID: 789744384}
   - component: {fileID: 789744383}
   - component: {fileID: 789744382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame11
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1664,9 +1680,9 @@ GameObject:
   - component: {fileID: 850107525}
   - component: {fileID: 850107527}
   - component: {fileID: 850107526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame7
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1774,9 +1790,9 @@ GameObject:
   - component: {fileID: 890120511}
   - component: {fileID: 890120510}
   - component: {fileID: 890120509}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame9
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1909,9 +1925,9 @@ GameObject:
   - component: {fileID: 925636847}
   - component: {fileID: 925636849}
   - component: {fileID: 925636848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame4
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2019,9 +2035,9 @@ GameObject:
   - component: {fileID: 1060593342}
   - component: {fileID: 1060593341}
   - component: {fileID: 1060593340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame13
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,9 +2171,9 @@ GameObject:
   - component: {fileID: 1127406610}
   - component: {fileID: 1127406609}
   - component: {fileID: 1127406608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame8
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2288,9 +2304,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1217463412}
-  m_Layer: 0
+  - component: {fileID: 1217463413}
+  m_Layer: 9
   m_Name: Jab
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2317,6 +2334,21 @@ Transform:
   m_Father: {fileID: 1325594091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217463413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217463411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4250dc7fa63540806fec4e747a446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKnockback: 5
+  selfKnockback: 0.1
+  stunFrames: 15
 --- !u!1 &1325594085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2363,8 @@ GameObject:
   - component: {fileID: 1325594088}
   - component: {fileID: 1325594087}
   - component: {fileID: 1325594086}
-  m_Layer: 0
+  - component: {fileID: 1325594092}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2350,11 +2383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa668438388c7841b0f2d74e6d70483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpd: 2
-  jumpForce: 5
+  rayLength: 1.5
   player: {fileID: 166300206}
-  action: 0
-  frameCount: 0
   randomFrames: 100
 --- !u!50 &1325594087
 Rigidbody2D:
@@ -2489,6 +2519,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325594092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325594085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fa913622a69a34d89b60b710711ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpd: 3
+  jumpForce: 6
+  action: 0
+  frameCount: 0
 --- !u!1 &1328988126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,9 +2547,9 @@ GameObject:
   - component: {fileID: 1328988130}
   - component: {fileID: 1328988129}
   - component: {fileID: 1328988128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame18
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2634,9 +2680,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415065447}
-  m_Layer: 0
+  - component: {fileID: 1415065448}
+  m_Layer: 9
   m_Name: Kick
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2674,6 +2721,21 @@ Transform:
   m_Father: {fileID: 1325594091}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415065448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415065446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4250dc7fa63540806fec4e747a446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKnockback: 7.5
+  selfKnockback: 0.1
+  stunFrames: 20
 --- !u!1 &1419245704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,9 +2747,9 @@ GameObject:
   - component: {fileID: 1419245705}
   - component: {fileID: 1419245707}
   - component: {fileID: 1419245706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame0
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2795,9 +2857,9 @@ GameObject:
   - component: {fileID: 1451764180}
   - component: {fileID: 1451764179}
   - component: {fileID: 1451764181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame3
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2930,7 +2992,7 @@ GameObject:
   - component: {fileID: 1487686622}
   - component: {fileID: 1487686621}
   - component: {fileID: 1487686620}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3039,9 +3101,9 @@ GameObject:
   - component: {fileID: 1531923157}
   - component: {fileID: 1531923159}
   - component: {fileID: 1531923158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame2
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3149,9 +3211,9 @@ GameObject:
   - component: {fileID: 1649133158}
   - component: {fileID: 1649133157}
   - component: {fileID: 1649133156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame16
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3284,9 +3346,9 @@ GameObject:
   - component: {fileID: 1732773056}
   - component: {fileID: 1732773058}
   - component: {fileID: 1732773057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame1
-  m_TagString: EnemyJab
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,9 +3456,9 @@ GameObject:
   - component: {fileID: 1840641275}
   - component: {fileID: 1840641274}
   - component: {fileID: 1840641273}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame17
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3529,9 +3591,9 @@ GameObject:
   - component: {fileID: 1966861753}
   - component: {fileID: 1966861755}
   - component: {fileID: 1966861754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame5
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3639,9 +3701,9 @@ GameObject:
   - component: {fileID: 2139164569}
   - component: {fileID: 2139164568}
   - component: {fileID: 2139164567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame14
-  m_TagString: EnemyKick
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3771,12 +3833,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8141499317943369301, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499317943369301, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499317985965892, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499317985965892, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318194744399, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318194744399, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_IsActive
@@ -3784,27 +3858,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318194744399, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318281239494, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318281239494, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318289008884, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318289008884, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318305363438, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318305363438, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318484074384, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318484074384, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318596384569, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318596384569, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318648636996, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318648636996, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318648636996, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_IsActive
@@ -3859,32 +3961,72 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318650123860, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318650123860, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318745230903, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318745230903, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318800961995, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318800961995, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499318833481782, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499318833481782, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319043548520, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319043548520, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319110777221, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319110777221, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319126315610, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319126315610, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319133010800, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319133010800, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319143041862, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319143041862, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_IsActive
@@ -3892,15 +4034,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319143041862, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319152773363, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319152773363, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319189202265, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319189202265, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319237793663, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319237793663, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_IsActive
@@ -3908,43 +4062,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319237793663, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319255373375, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319255373375, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerJab
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319430901808, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319430901808, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319451923679, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319451923679, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319509936445, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319509936445, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319583126838, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319583126838, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319624500531, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319624500531, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319770485043, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319770485043, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319964090879, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319964090879, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141499319987580790, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141499319987580790, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}
       propertyPath: m_TagString
-      value: PlayerKick
+      value: PlayerAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e94e1f3a56737347be20b29b5919002, type: 3}

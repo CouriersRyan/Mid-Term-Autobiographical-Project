@@ -6,21 +6,19 @@ TagManager:
   tags:
   - Ground
   - Enemy
-  - PlayerJab
-  - PlayerKick
-  - EnemyJab
-  - EnemyKick
+  - EnemyAttack
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - PlayerAttack
+  - EnemyAttack
   - 
   - 
   - 

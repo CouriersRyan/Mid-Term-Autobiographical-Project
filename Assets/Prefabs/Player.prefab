@@ -907,6 +907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141499318596384574}
+  - component: {fileID: 5619416351400285778}
   m_Layer: 0
   m_Name: Kick
   m_TagString: Untagged
@@ -947,6 +948,21 @@ Transform:
   m_Father: {fileID: 8141499318648637019}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5619416351400285778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141499318596384569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4250dc7fa63540806fec4e747a446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKnockback: 7.5
+  selfKnockback: 0.1
+  stunFrames: 20
 --- !u!1 &8141499318648636996
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +977,7 @@ GameObject:
   - component: {fileID: 8141499318648637022}
   - component: {fileID: 8141499318648637017}
   - component: {fileID: 8141499318648637016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,10 +1133,6 @@ MonoBehaviour:
   key0: 106
   key1: 107
   keyJump: 32
-  moveSpd: 3
-  jumpForce: 6
-  action: 0
-  frameCount: 0
 --- !u!1 &8141499318650123860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141499318745230900}
+  - component: {fileID: 799423223236397009}
   m_Layer: 0
   m_Name: Jab
   m_TagString: Untagged
@@ -1268,6 +1281,21 @@ Transform:
   m_Father: {fileID: 8141499318648637019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &799423223236397009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141499318745230903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4250dc7fa63540806fec4e747a446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKnockback: 5
+  selfKnockback: 0.1
+  stunFrames: 15
 --- !u!1 &8141499318800961995
 GameObject:
   m_ObjectHideFlags: 0
