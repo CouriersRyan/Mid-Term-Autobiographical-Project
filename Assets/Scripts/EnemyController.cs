@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private int randomFrames = 100;
+    [SerializeField] private int framesMax = 50;
+    [SerializeField] private int framesMin = 20;
     
     
     
@@ -42,7 +44,7 @@ public class EnemyController : MonoBehaviour
             {
                 input1 = true;
             }
-            randomFrames = Random.Range(20, 50);
+            randomFrames = Random.Range(framesMin, framesMax);
         }
         else
         {
