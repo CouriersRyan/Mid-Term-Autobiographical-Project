@@ -6,7 +6,8 @@ public class FighterAction : MonoBehaviour
     enum Fight
     {
         Jab = 0,
-        Kick = 1
+        Kick = 1,
+        Dash = 2
     }
 
     [SerializeField] private float moveSpd = 2;
@@ -19,6 +20,8 @@ public class FighterAction : MonoBehaviour
     private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
     private Animator _anim;
+
+    private FighterAudio _fighterAudio;
 
     private int _isWalkingID;
     private int _jumpID;
@@ -38,6 +41,7 @@ public class FighterAction : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+        _fighterAudio = GetComponent<FighterAudio>();
 
         _isWalkingID = Animator.StringToHash("isWalking");
         _jumpID = Animator.StringToHash("Jump");
@@ -125,7 +129,9 @@ public class FighterAction : MonoBehaviour
         {
             _rb.velocity = new Vector2(axisX * moveSpd, _rb.velocity.y);
             _anim.SetBool(_isWalkingID, true);
-            transform.localScale = new Vector3(Mathf.Sign(axisX), 1, 1);
+            var localScale = transform.localScale;
+            localScale = new Vector3(Mathf.Sign(axisX) * Mathf.Sign(localScale.x) * localScale.x, localScale.y, localScale.z);
+            transform.localScale = localScale;
         }
         else
         {
@@ -143,12 +149,20 @@ public class FighterAction : MonoBehaviour
     {
         if (_isGrounded)
         {
+            if (input0 && input1 && !_isInAction)
+            {
+                _isInAction = true;
+                action = Fight.Dash;
+                _rb.AddForce(Vector2.right * (Mathf.Sign(transform.localScale.x) * 7.5f), ForceMode2D.Impulse);
+                
+            }
             if (input0 && !_isInAction)
             {
                 _isInAction = true;
                 action = Fight.Jab;
                 _rb.AddForce(-_attackData[(int)action].selfKnockback * Mathf.Sign(transform.localScale.x) * 
                              Vector2.right, ForceMode2D.Impulse);
+                _fighterAudio.PlayAudio("punch");
             }
 
             if (input1 && !_isInAction)
@@ -157,6 +171,7 @@ public class FighterAction : MonoBehaviour
                 action = Fight.Kick;
                 _rb.AddForce(-_attackData[(int)action].selfKnockback  * Mathf.Sign(transform.localScale.x) * 
                              Vector2.right, ForceMode2D.Impulse);
+                _fighterAudio.PlayAudio("kick");
             }
         }
     }
@@ -186,8 +201,9 @@ public class FighterAction : MonoBehaviour
             if (other.CompareTag(_attackTypeReceived))
             {
                 Debug.Log("Hit.");
-                var attackData = _attackData[(int)action];
+                var attackData = other.transform.GetComponentInParent<AttackData>();
                 _stunned = attackData.stunFrames;
+                _rb.velocity = Vector2.zero;
                 _rb.AddForce(-Mathf.Sign(other.transform.position.x - transform.position.x) * Vector2.right * 
                              attackData.enemyKnockback,
                     ForceMode2D.Impulse);
@@ -216,7 +232,9 @@ public class FighterAction : MonoBehaviour
                 return "Jab";
             
             case Fight.Kick:
-                return "Kick";              
+                return "Kick";
+            case Fight.Dash:
+                return "Dash";
             default:
                 return null;
         }

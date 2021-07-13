@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float rayLength = 10f;
+    [SerializeField] private float groundRayLength = 5f;
     
     private FighterAction enemyAction;
     private bool _isMove = true;
@@ -16,7 +17,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int framesMax = 50;
     [SerializeField] private int framesMin = 20;
     
-    
+    //TODO: Use Raycasting to prevent the enemy from falling off. Jump when about to fall from behind, and stop if going forward and going to fall.
     
     // Start is called before the first frame update
     private void Start()
@@ -28,6 +29,7 @@ public class EnemyController : MonoBehaviour
     private void FixedUpdate()
     {
         FindPlayer();
+        CheckGroundFront();
         
         var axisX = _isMove ? Mathf.Sign(player.transform.position.x - transform.position.x) : 0;
         
@@ -74,6 +76,23 @@ public class EnemyController : MonoBehaviour
         else
         {
             _isMove = true;
+        }
+    }
+
+    private void CheckGroundFront()
+    {
+        var dir =  new Vector2(Mathf.Sign(player.transform.position.x - transform.position.x) * 1, -1);
+        var origin = new Vector2(transform.position.x, transform.position.y + 1f);
+        LayerMask mask = LayerMask.GetMask("Ground");
+
+        RaycastHit2D ray = Physics2D.Raycast(origin, dir, groundRayLength, mask);
+
+        Debug.DrawRay(origin, dir * groundRayLength, Color.blue);
+
+        if (ray.collider == null)
+        {
+            Debug.Log("Cliff Ahead");
+            _isMove = false;
         }
     }
 }

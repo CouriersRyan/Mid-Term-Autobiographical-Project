@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010970834721412552, guid: 5753e4355ce9f2e4ab44930e983eeda8, type: 3}
       propertyPath: framesMax
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1010970834721412552, guid: 5753e4355ce9f2e4ab44930e983eeda8, type: 3}
       propertyPath: framesMin
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010970834721412555, guid: 5753e4355ce9f2e4ab44930e983eeda8, type: 3}
       propertyPath: m_Name
-      value: Strong Enemy
+      value: Strong Enemy Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5753e4355ce9f2e4ab44930e983eeda8, type: 3}
