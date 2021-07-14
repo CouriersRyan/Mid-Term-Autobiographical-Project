@@ -7,7 +7,7 @@ public class FighterAction : MonoBehaviour
     {
         Jab = 0,
         Kick = 1,
-        Dash = 2
+        Dash = 2,
     }
 
     [SerializeField] private float moveSpd = 2;
@@ -85,7 +85,6 @@ public class FighterAction : MonoBehaviour
             if (_isInAction)
             {
                 if(_frame) _frame.SetActive(false);
-                //TODO: Find and store frames in start so that this is more efficient.
                 if (frameCount < _allActionFrames[(int) (action)].Length)
                 {
                     var temp = _allActionFrames[(int) (action)][frameCount];
@@ -196,7 +195,7 @@ public class FighterAction : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_stunned <= 0)
+        if (_stunned <= 5)
         {
             if (other.CompareTag(_attackTypeReceived))
             {

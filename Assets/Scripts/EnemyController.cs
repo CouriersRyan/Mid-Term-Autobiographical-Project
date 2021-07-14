@@ -17,8 +17,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int framesMax = 50;
     [SerializeField] private int framesMin = 20;
     
-    //TODO: Use Raycasting to prevent the enemy from falling off. Jump when about to fall from behind, and stop if going forward and going to fall.
-    
     // Start is called before the first frame update
     private void Start()
     {
